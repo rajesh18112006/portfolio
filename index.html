@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #header {
+      height: 10vh;
+      background-color: rgb(87, 79, 79);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    #name h2 {
+      color: white;
+    }
+
+    #link a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+    }
+    #left
+    {
+        height: 45vw;
+        width:40%;
+    }
+    #right
+    {
+        width:60%;
+        height: 45vw;
+        background-color: black;
+    }
+    #main
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    #name1
+    {
+      color: white;
+      margin-left: 8vw;  
+      font-size:15vh;
+    }
+    #my
+    {
+      color: white;
+      margin-left: 8vw;
+      margin-top: 5vw;
+      font-size:15vh;
+    }
+    #line
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    hr{
+      width: 100vw; 
+      height: 3px;
+      background-color: white; 
+      margin-top: 7vw;
+    }
+    p{
+      color: white;
+      margin-left: 8vw;
+      margin-top: 5vw;
+      margin-right: 2vw ;
+  
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div id="name">
+      <h2>Rajesh R</h2>
+    </div>
+    <div id="link">
+      <a href="">Home</a>
+      <a href="">Photo</a>
+      <a href="">About Me</a>
+      <a href="">Contact</a>
+      <a href="">...</a>
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="left">
+        <img src="photo.jpeg" alt="port" style="width: 100%; height: 100%;"/>
+    </div>
+    <div id="right">
+      <div id="line">
+        <h1 id="my">My</h1>
+        <hr>
+      </div>
+      <h1 id="name1">Portfolio</h1>
+      <p>I'm currently pursuing my B.Tech in Artificial Intelligence and Data Science at Easwari Engineering College. I’m passionate about creating tech-driven solutions that are meaningful, efficient, and user-friendly. With experience in full-stack development, C/C++, Java, Python, and data analytics, I bring a blend of logic and creativity to everything I build.</p>
+    </div>
+  </div>
+</body>
+</html>
