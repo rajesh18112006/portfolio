@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
+  <title>Portfolio</title>
   <style>
     * {
       margin: 0;
@@ -11,6 +11,12 @@
       box-sizing: border-box;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+    }
+
+    /* HEADER */
     #header {
       height: 10vh;
       background-color: rgb(87, 79, 79);
@@ -18,6 +24,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
     }
 
     #name h2 {
@@ -28,54 +35,90 @@
       color: white;
       text-decoration: none;
       margin: 10px;
+      font-size: 1rem;
     }
-    #left
-    {
-        height: 45vw;
-        width:40%;
-    }
-    #right
-    {
-        width:60%;
-        height: 45vw;
-        background-color: black;
-    }
-    #main
-    {
-        display: flex;
-        justify-content: space-between;
-    }
-    #name1
-    {
-      color: white;
-      margin-left: 8vw;  
-      font-size:15vh;
-    }
-    #my
-    {
-      color: white;
-      margin-left: 8vw;
-      margin-top: 5vw;
-      font-size:15vh;
-    }
-    #line
-    {
+
+    /* MAIN LAYOUT */
+    #main {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap; /* ensures stacking on small screens */
+      padding: 20px;
     }
-    hr{
-      width: 100vw; 
-      height: 3px;
-      background-color: white; 
-      margin-top: 7vw;
+
+    #left {
+      flex: 1 1 300px; /* flexible but minimum width 300px */
+      max-width: 40%;
     }
-    p{
+
+    #left img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    #right {
+      flex: 1 1 300px;
+      max-width: 60%;
+      padding: 20px;
+      background-color: black;
       color: white;
-      margin-left: 8vw;
-      margin-top: 5vw;
-      margin-right: 2vw ;
-  
+    }
+
+    #line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #my {
+      font-size: 8vw; /* scales with screen */
+      margin: 0;
+    }
+
+    #name1 {
+      font-size: 8vw;
+      margin: 10px 0;
+    }
+
+    hr {
+      flex: 1;
+      height: 3px;
+      background-color: white;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      #header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      #main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #left, #right {
+        max-width: 100%;
+      }
+
+      #my, #name1 {
+        font-size: 12vw; /* larger but fits on mobile */
+        text-align: center;
+      }
+
+      p {
+        margin: 20px;
+        text-align: justify;
+      }
     }
   </style>
 </head>
@@ -85,17 +128,17 @@
       <h2>Rajesh R</h2>
     </div>
     <div id="link">
-      <a href="">Home</a>
-      <a href="">Photo</a>
-      <a href="">About Me</a>
-      <a href="">Contact</a>
-      <a href="">...</a>
+      <a href="#">Home</a>
+      <a href="#">Photo</a>
+      <a href="#">About Me</a>
+      <a href="#">Contact</a>
+      <a href="#">...</a>
     </div>
   </div>
 
   <div id="main">
     <div id="left">
-        <img src="photo.jpeg" alt="port" style="width: 100%; height: 100%;"/>
+        <img src="photo.jpeg" alt="port"/>
     </div>
     <div id="right">
       <div id="line">
